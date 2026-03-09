@@ -79,7 +79,7 @@ class LLMService:
                 "max_tokens": max_tokens
             }
             
-            async with httpx.AsyncClient(timeout=60.0) as client:
+            async with httpx.AsyncClient(timeout=120.0) as client:
                 response = await client.post(
                     url,
                     headers=headers,

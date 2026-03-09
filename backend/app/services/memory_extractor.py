@@ -103,7 +103,7 @@ AI：好的，我记住了，以后用吐槽风格和你聊
             return extraction_result
             
         except Exception as e:
-            logger.error(f"记忆提取失败: {e}")
+            logger.error(f"记忆提取失败: {e}", exc_info=True)
             # 提取失败时返回空结果，而不是抛出异常
             return MemoryExtractionResult()
     
@@ -141,7 +141,7 @@ AI：好的，我记住了，以后用吐槽风格和你聊
             "max_tokens": 1000
         }
         
-        async with httpx.AsyncClient(timeout=30.0) as client:
+        async with httpx.AsyncClient(timeout=90.0) as client:
             response = await client.post(
                 self.llm_api_url,
                 headers=headers,
