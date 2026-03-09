@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS memories (
     content TEXT NOT NULL,  -- 记忆文本内容
     
     -- 向量嵌入（用于语义搜索）
-    -- dimension=512 对应 bge-small-zh-v1.5 本地模型
-    embedding vector(512),
+    -- dimension=1024 对应 text-embedding-v4 (DashScope)
+    embedding vector(1024),
     
     -- 元数据
     memory_type VARCHAR(50) DEFAULT 'fact',  -- fact, preference, skill, experience
@@ -106,7 +106,7 @@ CREATE INDEX IF NOT EXISTS idx_sessions_expires_at ON sessions(expires_at);
 
 -- 向量相似性搜索函数
 CREATE OR REPLACE FUNCTION search_similar_memories(
-    query_embedding vector(512),
+    query_embedding vector(1024),
     target_agent_id UUID DEFAULT NULL,
     match_threshold FLOAT DEFAULT 0.7,
     match_count INTEGER DEFAULT 10
