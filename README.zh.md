@@ -176,6 +176,30 @@ Memory Hub 实现了独特的 Hook 机制，确保智能体在对话过程中不
 
 ## 🚀 快速开始
 
+### 1. 克隆项目
+
+```bash
+git clone https://github.com/wen41/memory-hub.git
+cd memory-hub
+```
+
+### 2. 配置环境变量
+
+```bash
+# 复制环境变量模板
+cp .env.example .env
+
+# 编辑配置（修改密码等）
+nano .env
+```
+
+**必须修改的配置**：
+- `DB_PASSWORD` - 数据库密码
+- `ADMIN_PASSWORD` - pgAdmin 密码
+- `ALLOWED_ORIGINS` - 允许的 CORS 来源
+
+### 3. 启动服务
+
 ### 前置条件
 
 - ✅ Docker & Docker Compose v2.0+
