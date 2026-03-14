@@ -38,6 +38,7 @@ env/
 *.swp
 *.swo
 *~
+*.kate-swp
 
 # 日志
 *.log
@@ -71,3 +72,42 @@ htmlcov/
 tmp/
 temp/
 *.tmp
+
+# OpenClaw 个人配置
+agents/
+.openclaw/
+.clawhub/
+hooks/
+skills/
+SOUL.md
+AGENTS.md
+MEMORY.md
+TOOLS.md
+USER.md
+IDENTITY.md
+HEARTBEAT.md
+BOOTSTRAP.md
+TASK_CURRENT.md
+TASK_SYSTEM.md
+
+# 临时文件
+*.png
+*.sql
+*.kate-swp
+*.swp
+venv/
+test_venv/
+
+# 个人笔记
+*_REPORT.md
+*报告.md
+*手册.md
+*指南.md
+DAILY_AI_NEWS.md
+
+# 临时脚本
+generate_image*.py
+import_*.py
+jimeng_*.py
+midnight_*.py
+midnight_*.sh
